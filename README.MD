@@ -1,7 +1,7 @@
 # Quick start for cocos2d-x with the latest JavaScript.
 
 ## Getting started
-1. **Clone repo** `https://github.com/Shidil/cocos-es6.git`
+1. **Clone repo** `https://github.com/drjiro/cocos-es6.git`
 2. **Install packages** `yarn`
 3. **Run setup** `yarn run setup`
 4. **Run development server** `yarn start`
