@@ -1,5 +1,5 @@
 {
-  "name": "cocos-es6",
+  "name": "cocos-es6-7",
   "version": "0.0.1",
   "description": "Quick start for cocos 2d with es6",
   "main": "setup.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "node tools/setup.js",
     "start": "npm run dev",
-    "dev": "webpack-dev-server --config tools/webpack.config.js --port 8080 --progress --colors --hot",
+    "dev": "webpack-dev-server --config tools/webpack.config.js --port 3000 --progress --colors --hot",
     "prod:bundlesrc": "NODE_ENV=production webpack -p --config tools/webpack.production.config.js",
     "prod:cocos": "cocos deploy -p web -m release",
     "production": "npm run clean && npm run prod:bundlesrc && npm run prod:cocos && rm -f bundle.js",
@@ -23,15 +23,16 @@
     "boilerplate",
     "quickstart"
   ],
-  "author": "Shidil Eringa",
+  "author": "Takao Wada",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.34",
-    "@babel/core": "7.0.0-beta.34",
-    "@babel/plugin-transform-runtime": "7.0.0-beta.34",
-    "@babel/polyfill": "7.0.0-beta.34",
-    "@babel/preset-env": "7.0.0-beta.34",
-    "babel-loader": "8.0.0-beta.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "4.1.2",
     "delete": "^1.1.0",
     "eslint": "4.12.1",
@@ -42,6 +43,15 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "@babel/runtime": "7.0.0-beta.34"
+    "babel-runtime": "6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
   }
 }

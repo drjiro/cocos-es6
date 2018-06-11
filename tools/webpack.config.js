@@ -4,8 +4,8 @@ const source = path.resolve(__dirname, '../src');
 module.exports = {
   entry: {
     main: [
-      'webpack-dev-server/client?http://localhost:8080',
-      './src/index'
+      'webpack-dev-server/client?http://localhost:3000',
+      './src/index.js'
     ]
   },
   output: {
@@ -31,8 +31,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/transform-runtime']
+            presets: [
+              'es2015',
+              'stage-0'
+            ],
+            plugins: [
+              'transform-runtime'
+            ]
           }
         }
       }

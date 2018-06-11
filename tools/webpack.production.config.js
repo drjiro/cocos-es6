@@ -16,8 +16,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/transform-runtime']
+            presets: [
+              'es2015',
+              'stage-0'
+            ],
+            plugins: [
+              'transform-runtime'
+            ]
           }
         }
       }

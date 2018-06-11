@@ -1,4 +1,4 @@
-/**
+/*
  * A brief explanation for "project.json":
  * Here is the content of project.json file, this is the global configuration for your game, you can modify it to customize some behavior.
  * The detail of each field is under it.
@@ -50,7 +50,7 @@
     // "jsList" sets the list of js files in your game.
  }
  *
- */
-
-console.log('game starting');
+*/
+console.log('game run at main.js');
 cc.game.run();
+cc.gameReady = true;

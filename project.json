@@ -12,6 +12,6 @@
     "modules" : ["cocos2d"],
 
     "jsList" : [
-        "bundle.js"
+      "bundle.js"
     ]
 }
